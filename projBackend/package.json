@@ -5,7 +5,9 @@
   "main": "app.js",
   "scripts": {
     "start": "nodemon app.js",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix ../projfrontend && npm run build --prefix ../projfrontend"
+    "build": "cd ../projfrontend && npm run build",
+    "install-rfront": "cd ../projfrontend && npm install",
+    "heroku-postbuild": "npm run install-rfrontend && npm run build"
   },
   "keywords": [],
   "author": "",
